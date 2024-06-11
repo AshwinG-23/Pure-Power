@@ -1,0 +1,36 @@
+<div class="custom-image-section">
+  <div class="container">
+      <img src="{{ section.settings.plain_img | img_url: 'large' }}" alt="Custom Image">
+  </div>
+</div>
+
+
+<style>
+.custom-image-section .container {
+  text-align: center;
+}
+.custom-image-section img {
+  width: 85vw;
+  height: auto;
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "PlainImg",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "plain_img",
+      "label": "Plain Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PlainImage",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

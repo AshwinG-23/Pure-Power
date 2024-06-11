@@ -1,0 +1,41 @@
+<div class="custom-text-section">
+  <div class="container">
+    <p>{{ section.settings.plain_text }}</p>
+  </div>
+  <div class="container">
+    <p>{{ section.settings.plain_text1 }}</p>
+  </div>
+</div>
+
+<style>
+.custom-text-section p {
+  color: black;
+  padding: 3rem;
+}
+</style>
+
+{% schema %}
+{
+  "name": "PlainText",
+  "settings": [
+    {
+      "type": "text",
+      "id": "plain_text",
+      "label": "Plain Text",
+      "default": "Enter your text here"
+    },
+    {
+      "type": "text",
+      "id": "plain_text1",
+      "label": "Plain Text",
+      "default": "Enter your text here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PlainText",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
